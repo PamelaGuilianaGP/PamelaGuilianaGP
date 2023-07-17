@@ -1,0 +1,188 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPageAdmin.master.cs" Inherits="CapaPresentacion.Admin.MasterPageAdmin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Bienvenidos al panel de administracion - Paco Hostel</title>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/vendor/linearicons/style.css">
+	<link rel="stylesheet" href="assets/vendor/chartist/css/chartist-custom.css">
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="assets/css/main.css">
+	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+	<link rel="stylesheet" href="assets/css/demo.css">
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../images/icons/favicon.png">
+    <link href="../vendor/jqueryui/jquery-ui.min.css" rel="stylesheet" />
+    <!-- Javascript -->
+    <script src="assets/scripts/jquery-1.12.4.js"></script>
+    <script src="assets/scripts/jquery-ui.js"></script>
+
+    
+	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+	<script src="assets/vendor/chartist/js/chartist.min.js"></script>
+	<script src="assets/scripts/klorofil-common.js"></script>
+    <script src="assets/scripts/sweetalert.min.js"></script>
+    <style>
+        .navbar-default .brand {
+            float: left;
+            padding: 10px 39px;
+            background-color: #fff;
+        }
+        @media screen and (max-width: 767px){
+        .navbar-nav > li > a {
+            padding: 5px 20px;
+            }
+        }
+        
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   <!-- WRAPPER -->
+    <div id="wrapper">
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="brand">
+                <a href="Index.aspx">
+                    <img src="../images/icons/logo2.png" alt="Klorofil Logo" class="img-responsive logo" style="height:66px"></a>
+            </div>
+            <div class="container-fluid">
+               
+                <div class="nav navbar-nav navbar-center">
+                     <div class="navbar-btn">
+                        <button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
+                    </div>
+                    <div style="text-align:-webkit-center;">
+                         <a href="Index.aspx">
+                                <img src="../images/icons/logo2.png" alt="Paco Hostel" class="img-responsive logo ImgLogo" style="height: 81px;width:88px;">
+                            </a>
+                    </div>
+                </div>
+                <div class="navbar-form navbar-left" >
+                    <div class="input-group">
+                        <asp:Label runat="server" CssClass="badge badge-primary" Visible="false" ID="LbNombreUsuario"></asp:Label>
+                    </div>
+                        
+                </div>
+               
+                <div id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right">
+                                              
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="lnr lnr-cog" style="font-size:30px;"></i>
+                                <span>
+                                    <asp:Label runat="server" CssClass="label label-success"  ID="NomUser"></asp:Label>
+                                    <asp:Label runat="server" CssClass="label label-warning" ID="LbTipoUsuario"></asp:Label>
+                                </span>
+                                <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="EditUsuario.aspx"><i class="lnr lnr-user"></i><span>Mi Perfil</span></a></li>
+                                <li><a href="CambiarContraseña.aspx"><i class="lnr lnr-pencil"></i><span>Cambiar Contraseña</span></a></li>
+                                <li><a href="LogOut.aspx"><i class="lnr lnr-exit"></i><span>Cerrar Sesíon</span></a></li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- END NAVBAR -->
+        <!-- LEFT SIDEBAR -->
+        <div id="sidebar-nav" class="sidebar">
+            <div class="sidebar-scroll">
+                <nav>
+                    <ul class="nav">
+                        <li><a href="index.html" class="active"><i class="lnr lnr-home"></i><span>Dashboard</span></a></li>
+                        <li><a href="ListadoUsuarios.aspx" class=""><i class="lnr lnr-user"></i><span>Usuarios</span></a></li>
+                        <li><a href="CambiarContraseña.aspx" class=""><i class="lnr lnr-pencil"></i><span>Cambiar Contraseña</span></a></li>
+                        <li><a href="ListadoHotel.aspx" class=""><i class="lnr lnr-apartment"></i><span>Admin Hotel</span></a></li>
+                        <li><a href="ListadoHuesped.aspx" class=""><i class="lnr lnr-users"></i><span>Admin Huesped</span></a></li>
+                        <li><a href="AdminGaleria.aspx" class=""><i class="lnr lnr-camera"></i><span>Admin Galeria</span></a></li>
+                        <li>
+							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-chart-bars"></i> <span>Reportes</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="subPages" class="collapse ">
+								<ul class="nav">
+									<li><a href="Reporte_Reservas.aspx" class="">Reporte Reservas</a></li>
+									
+								</ul>
+							</div>
+						</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- END LEFT SIDEBAR -->
+        <!-- MAIN CONTENT -->
+        <div class="main">
+            <asp:ContentPlaceHolder ID="ContentMain" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- END MAIN CONTENT -->
+        <div class="clearfix"></div>
+        <footer>
+            <div class="container-fluid">
+                <p class="copyright">&copy; 2019 <a href="https://www.solucionesdesistemas.com" target="_blank">Soluciones de Sistems</a>. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        $(document).ready(function () {
+            $('.solo-numero').keyup(function () {
+                this.value = (this.value + '').replace(/[^0-9]/g, '');
+            });
+        });
+        function filterFloat(evt, input) {
+            // Backspace = 8, Enter = 13, ‘0′ = 48, ‘9′ = 57, ‘.’ = 46, ‘-’ = 43
+            var key = window.Event ? evt.which : evt.keyCode;
+            var chark = String.fromCharCode(key);
+            var tempValue = input.value + chark;
+            if (key >= 48 && key <= 57) {
+                if (filter(tempValue) === false) {
+                    return false;
+                } else {
+                    return true;
+                }
+            } else {
+                if (key == 8 || key == 13 || key == 0) {
+                    return true;
+                } else if (key == 46) {
+                    if (filter(tempValue) === false) {
+                        return false;
+                    } else {
+                        return true;
+                    }
+                } else {
+                    return false;
+                }
+            }
+        }
+        function filter(__val__) {
+            var preg = /^([0-9]+\.?[0-9]{0,2})$/;
+            if (preg.test(__val__) === true) {
+                return true;
+            } else {
+                return false;
+            }
+
+        }
+    </script>
+     <asp:ContentPlaceHolder ID="ContentScript" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

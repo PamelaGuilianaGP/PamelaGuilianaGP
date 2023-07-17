@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "CapaDatos\CapaDatos.csproj", "{3B6B7CA7-1042-4E4D-81D2-1CCDECEBBA69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNegocio", "CapaNegocio\CapaNegocio.csproj", "{CDD858F9-749C-41F4-B8C7-F2C9C0D882C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresentacion", "CapaPresentacion\CapaPresentacion.csproj", "{2A85FE8D-2B91-4133-9A60-A63206560689}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B6B7CA7-1042-4E4D-81D2-1CCDECEBBA69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B6B7CA7-1042-4E4D-81D2-1CCDECEBBA69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B6B7CA7-1042-4E4D-81D2-1CCDECEBBA69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B6B7CA7-1042-4E4D-81D2-1CCDECEBBA69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDD858F9-749C-41F4-B8C7-F2C9C0D882C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD858F9-749C-41F4-B8C7-F2C9C0D882C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD858F9-749C-41F4-B8C7-F2C9C0D882C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDD858F9-749C-41F4-B8C7-F2C9C0D882C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A85FE8D-2B91-4133-9A60-A63206560689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A85FE8D-2B91-4133-9A60-A63206560689}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A85FE8D-2B91-4133-9A60-A63206560689}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A85FE8D-2B91-4133-9A60-A63206560689}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F94E563C-327C-409C-B822-9594BC2BB7DA}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://miguelangeldev.visualstudio.com/DefaultCollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CapaDatos\\CapaDatos.csproj
+		SccProjectName1 = CapaDatos
+		SccLocalPath1 = CapaDatos
+		SccProjectUniqueName2 = CapaNegocio\\CapaNegocio.csproj
+		SccProjectName2 = CapaNegocio
+		SccLocalPath2 = CapaNegocio
+		SccProjectUniqueName3 = CapaPresentacion\\CapaPresentacion.csproj
+		SccProjectName3 = CapaPresentacion
+		SccLocalPath3 = CapaPresentacion
+	EndGlobalSection
+EndGlobal
